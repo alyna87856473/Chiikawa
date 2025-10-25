@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/152613169?v=4" type="image/x-icon" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiikawa</title>
+</head>
+<style>
+    body {
+        background-color: #fcdede;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    head {
+        padding: 15px;
+        background-color: #ffd0d8;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header a {
+        color: rgb(0, 0, 0);
+        background-color: #ffffff;
+        text-decoration: none;
+        border: 2px solid #000000;
+        border-radius: 30px;
+        font-size: 30px;
+        padding: 5px 20px;
+        margin: 30px 10px;
+        margin-bottom: 15px;
+        right: 60px;
+        position: absolute;
+    }
+
+    .video-container {
+        margin: 20px auto;
+        max-width: 640px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    video {
+        bottom: 50;
+        text-align: center;
+        width: 100%;
+    }
+
+    .button-container {
+        margin-top: 30px;
+    }
+
+    button {
+        float: left;
+        margin: 50 50px;
+        padding: 8px 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 70px;
+        background-color: #ffc2c2;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #f7d6d6;
+    }
+
+    #OverviewText4 {
+        position: relative;
+    }
+
+    #OverviewText4 img {
+        position: absolute;
+        bottom: 1px;
+        right: 600px;
+    }
+
+    .comment-section {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .comment-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .comment-form {
+        margin-bottom: 20px;
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .comment-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #ffc2c2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .comments {
+        margin-top: 20px;
+    }
+
+    .comment {
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        display: flex;
+    }
+
+    .comment img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .comment-content {
+        flex: 1;
+    }
+
+    .comment-content p {
+        margin: 0;
+    }
+
+    .comment-actions {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .comment-actions a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+
+    <header>
+        <header style="background-color:#ffd0d8">
+            <link rel="stylesheet" href="r.css">
+            <img src="https://avatars.githubusercontent.com/u/152613169?v=4" height="100px" />
+            <a href="https://t.me/chiikawalaim">t.me/chiikawalaim</a>
+            <div id="OverviewText4">
+                <img src="https://cdn.bsky.app/img/banner/plain/did:plc:pdtcepm4kn2u23zmq6o67uxl/bafkreibgzwcep5rqhzjzjwn6k6tqqzbql53infobhxrgukgulanaapcqnm@jpeg"
+                    rigth="30px" height="100px" />
+            </div>
+        </header>
+    </header>
+
+    <div class="video-container">
+        <div class="button-container">
+            <button onclick="changeVideo(0)">Серия 1</button>
+            <button onclick="changeVideo(1)">Серия 2</button>
+            <button onclick="changeVideo(2)">Серия 3</button>
+            <button onclick="changeVideo(3)">Серия 4</button>
+            <button onclick="changeVideo(4)">Серия 5</button>
+            <button onclick="changeVideo(5)">Серия 6</button>
+            <button onclick="changeVideo(6)">Серия 7</button>
+            <button onclick="changeVideo(7)">Серия 8</button>
+            <button onclick="changeVideo(8)">Серия 9</button>
+            <button onclick="changeVideo(9)">Серия 10</button>
+            <button onclick="changeVideo(10)">Серия 11</button>
+            <button onclick="changeVideo(11)">Серия 12</button>
+        </div>
+        <video id="videoPlayer" width="2000" controls>
+            <source id="videoSource" src="video/episot1.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео
+        </video>
+    </div>
+    <div class="comment-section">
+        <h2>Оставить комментарий</h2>
+        <form class="comment-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <select>
+                <option>Ваш аватар</option>
+                <!-- Добавьте сюда аватары -->
+                <img src="file:///C:/Users/User/Desktop/image%201.png">
+            </select>
+            <textarea placeholder="Ваш комментарий" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <div class="comments">
+            <div class="comment">
+                <img src="https://avatars.mds.yandex.net/i?id=6aa10011e1a358e2ee0480ade2f76db6a8ab33d4-12494025-images-thumbs&n=13"
+                    alt="Аватар">
+                <div class="comment-content">
+                    <p><strong>bullshit</strong>: Я жду коллабу с Каньем Вестом</p>
+                </div>
+                <div class="comment-actions">
+                    <a href="#">Ответить</a>
+                    <span>❤ 1</span>
+                </div>
+            </div>
+            <!-- Добавьте сюда другие комментарии -->
+        </div>
+    </div>
+
+    <script>
+        const videos = [
+            "video/episot1.mp4",
+            "video/episot2.mp4",
+            "video/episot3.mp4",
+            "video/episot4.mp4",
+            "video/episot5.mp4",
+            "video/episot6.mp4",
+            "video/episot7.mp4",
+            "video/episot8.mp4",
+            "video/episot9.mp4",
+            "video/episot10.mp4",
+            "video/episot11.mp4",
+            "video/episot12.mp4"
+        ];
+
+        function changeVideo(index) {
+            const videoElement = document.getElementById('videoPlayer');
+            const sourceElement = document.getElementById('videoSource');
+
+            sourceElement.src = videos[index];
+            videoElement.load();
+            videoElement.pause();
+        }</script>
+</body>
+
+</html>
+<script>

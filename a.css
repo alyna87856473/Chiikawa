@@ -1,0 +1,147 @@
+   body {
+       background-color: #fcdede;
+       font-family: sans-serif;
+       margin: 0;
+       padding: 0;
+   }
+
+   head {
+       padding: 15px;
+       background-color: #ffd0d8;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   header a {
+       color: rgb(0, 0, 0);
+       background-color: #ffffff;
+       text-decoration: none;
+       border: 2px solid #000000;
+       border-radius: 30px;
+       font-size: 30px;
+       padding: 5px 20px;
+       margin: 30px 10px;
+       margin-bottom: 15px;
+       right: 60px;
+       position: absolute;
+   }
+
+   .video-container {
+       margin: 20px auto;
+       max-width: 640px;
+       text-align: center;
+       padding-bottom: 10px;
+   }
+
+   video {
+       bottom: 50;
+       text-align: center;
+       width: 100%;
+   }
+
+   .button-container {
+       margin-top: 30px;
+   }
+
+   button {
+       float: left;
+       margin: 50 50px;
+       padding: 8px 16px;
+       cursor: pointer;
+       border: none;
+       border-radius: 70px;
+       background-color: #ffc2c2;
+       color: rgb(0, 0, 0);
+       font-size: 15px;
+       transition: background-color 0.3s;
+   }
+
+   button:hover {
+       background-color: #f7d6d6;
+   }
+
+   #OverviewText4 {
+       position: relative;
+   }
+
+   #OverviewText4 img {
+       position: absolute;
+       bottom: 1px;
+       right: 600px;
+   }
+
+   .comment-section {
+       max-width: 600px;
+       margin: 20px auto;
+       padding: 20px;
+       background-color: white;
+       border-radius: 10px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .comment-section h2 {
+       text-align: center;
+       margin-bottom: 20px;
+   }
+
+   .comment-form {
+       margin-bottom: 20px;
+   }
+
+   .comment-form input,
+   .comment-form textarea {
+       width: 100%;
+       padding: 10px;
+       margin-bottom: 10px;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+   }
+
+   .comment-form button {
+       width: 100%;
+       padding: 10px;
+       background-color: #ffc2c2;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+   }
+
+   .comments {
+       margin-top: 20px;
+   }
+
+   .comment {
+       padding: 15px;
+       background-color: #f9f9f9;
+       border-radius: 10px;
+       margin-bottom: 15px;
+       display: flex;
+   }
+
+   .comment img {
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       margin-right: 10px;
+   }
+
+   .comment-content {
+       flex: 1;
+   }
+
+   .comment-content p {
+       margin: 0;
+   }
+
+   .comment-actions {
+       margin-top: 10px;
+       display: flex;
+       justify-content: space-between;
+   }
+
+   .comment-actions a {
+       color: #ffffff;
+       text-decoration: none;
+   }
